@@ -17,6 +17,27 @@
                 <string></string>
             </dict>
             <dict>
+                <!-- Cmake: Main Line -->
+                <key>match</key>
+                <string>[main].*</string>
+                <key>name</key>
+                <string>cmake.main.line</string>
+            </dict>
+            <dict>
+                <!-- Cmake: Driver Line -->
+                <key>match</key>
+                <string>[driver].*</string>
+                <key>name</key>
+                <string>cmake.driver.line</string>
+            </dict>
+            <dict>
+                <!-- Cmake: Build Error -->
+                <key>match</key>
+                <string>[build].*error.*</string>
+                <key>name</key>
+                <string>cmake.build.error</string>
+            </dict>
+            <dict>
                 <!-- Quoted strings with " -->
                 <key>match</key>
                 <string>"(.*?)"</string>
