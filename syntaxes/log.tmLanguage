@@ -13,13 +13,65 @@
         <key>patterns</key>
         <array>
             <dict>
+                <!-- Executing Command: ...-->
                 <key>match</key>
-                <string></string>
+                <string>Executing.*</string>
+                <key>name</key>
+                <string>cmake.executing</string>
             </dict>
             <dict>
-                <!-- CMAKE / C++ Output  -->
+                <!-- filepath -->
                 <key>match</key>
-                <string>[build].*error.*</string>
+                <string>((?:[A-Za-z0-9\-_]\:){0,1}(?:[\\/][\w.|-]+){2,})</string>
+                <key>name</key>
+                <string>filepath</string>
+            </dict>
+            <dict>
+                <!-- [cmake]  -->
+                <key>match</key>
+                <string>^\[cmake\]</string>
+                <key>name</key>
+                <string>cmake</string>
+            </dict>
+            <dict>
+                <!-- [main]  -->
+                <key>match</key>
+                <string>^\[main\]</string>
+                <key>name</key>
+                <string>cmake.main.line</string>
+            </dict>
+            <dict>
+                <!-- [proc] " -->
+                <key>match</key>
+                <string>^\[proc\]</string>
+                <key>name</key>
+                <string>cmake.proc.line</string>
+            </dict>
+            <dict>
+                <!-- [kit] " -->
+                <key>match</key>
+                <string>^\[kit\]</string>
+                <key>name</key>
+                <string>cmake.kit.line</string>
+            </dict>
+            <dict>
+                <!-- [variant] " -->
+                <key>match</key>
+                <string>^\[variant\]</string>
+                <key>name</key>
+                <string>cmake.variant.line</string>
+            </dict>
+            <dict>
+                <!-- [driver] " -->
+                <key>match</key>
+                <string>^\[driver\]</string>
+                <key>name</key>
+                <string>cmake.driver.line</string>
+            </dict>
+            <dict>
+                <!-- [build] error" -->
+                <key>match</key>
+                <string>^\[build\].*error.*</string>
                 <key>name</key>
                 <string>cmake.build.error</string>
             </dict>
